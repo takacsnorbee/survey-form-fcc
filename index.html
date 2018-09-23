@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <meta lang="en">
+  <link href="main.css" rel="stylesheet">
+</head>
+<body>
+  <h1 id="title">Survey Form</h1>
+  <div id="form-wrapper">
+    <form id="survey-form" action="https://crossorigin.me/https://freecodecamp.com">
+      <p id="description">Let us know how we can improve freeCodeCamp</p>
+    <div class="row">
+      <label class="label" id="name-label"><sup>*</sup> Name</label>
+      <div class="rightTab">
+        <input id="name" class="input-field" name="name" type="text" placeholder="Enter your name" required>
+      </div>
+    </div>
+    <div class="row">
+      <label class="label" id="email-label"><sup>*</sup> Email</label>
+      <div class="rightTab">
+        <input id="email" class="input-field" name="email" type="email" placeholder="Enter your Email" required>
+      </div>
+    </div>
+    <div class="row">
+      <label class="label" id="number-label"><sup>*</sup> Age</label>
+      <div class="rightTab">
+        <input id="number" class="input-field" name="age" type="number" placeholder="Enter your Age" min="1" max="125">
+      </div>
+    </div>
+    <div class="row">
+      <div class="label">Which option best describes your current role?</div>
+      <div class="rightTab">
+        <select id="dropdown" class="dropdown" name="currentPos">
+          <option disabled="" selected="" value="">Select an option</option>
+          <option value="student">Student</option>
+          <option value="job">Full time job</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="label"><sup>*</sup> How likely is that you would recommend freeCodeCamp to a friend?</div>
+      <div class="rightTab">
+        <ul>
+          <li class="radio">
+            <label>
+            <input class="userRating" name="radio-buttons" value="1" type="radio">Definitely
+            </label>
+          </li>
+          <li class="radio">
+            <label>
+            <input class="userRating" name="radio-buttons" value="2" type="radio">Maybe
+            </label>
+          </li>
+          <li class="radio">
+            <label>
+            <input class="userRating" name="radio-buttons" value="3" type="radio">Not Sure
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>  
+    <div class="row">
+      <div class="label" for="mostlike">What do you like most in FCC: </div>
+      <div class="rightTab">
+        <select id="most-like" class="dropdown" name="mostLike">
+          <option disabled="" selected="" value="">Select an option</option>
+          <option value="challanges">Challanges</option>
+          <option value="projects">Projects</option>
+          <option value="community">Community</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="label" for="preferences">Things that should be improved in the future<br>(Check all that apply):</div>
+      <div class="rightTab">
+        <ul>
+          <li class="checkbox">
+            <label>
+              <input class="userRating" name="prefer" value="1" type="checkbox">Front-end Projects</label></li>
+          <li class="checkbox">
+            <label>  
+              <input class="userRating" name="prefer" value="2" type="checkbox">Back-end Projects</label></li>
+          <li class="checkbox">
+            <label>
+              <input class="userRating" name="prefer" value="3" type="checkbox">Challenges</label></li>
+          <li class="checkbox">
+            <label>
+              <input class="userRating" name="prefer" value="4" type="checkbox">Data Visualization</label></li>
+          <li class="checkbox">
+            <label>
+              <input class="userRating" name="prefer" value="5" type="checkbox">Videos</label></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="label" for="textarea">Any Comments or Suggestions?
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height: 50px;resize: vertical" name="comment" placeholder="enter your comment here..."></textarea>
+      </div>
+    </div>
+    <button type="submit" id="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
